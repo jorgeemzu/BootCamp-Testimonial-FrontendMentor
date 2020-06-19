@@ -47,6 +47,13 @@ img, svg{
 
 }
 
+.slide1 .slaid__img .img{
+    background-image: url('images/image-tanya.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .slaid__img{
     padding: 2.3em;
 }
@@ -54,6 +61,7 @@ img, svg{
 .slaid__img img{
     box-shadow: 0px 52px 57px -55px var(--darkBlue);
     border-radius: 5px;
+
 }
 
 .btns{
@@ -62,24 +70,25 @@ img, svg{
     background-color: white;
     width: 80px;
     border-radius: 50px;
-    /* padding: 0 .8em; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     left: calc(50% - 40px);
     top: calc(50% + 20px);
+    cursor: S;
 }
 
 
 
 .btn__left,
-.btn__right{
+.btn__rigth{
     /* background-image: url(images/icon-prev.svg); */
     padding: .8em;
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
     background-color: transparent;
+    width: 80%;
 }
 
 .slaid__text{
