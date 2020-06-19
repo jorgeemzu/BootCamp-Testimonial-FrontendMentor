@@ -3,8 +3,8 @@ let slideImg = document.querySelectorAll('.slaid__img img'),
     slideTextName = document.querySelectorAll('.text__testimonial--info h2'),
     slideTextProf = document.querySelectorAll('.text__testimonial--info p'),
     slide = document.querySelectorAll('.slaid'),
-    arrowLeft = document.querySelector('.btn__left'),
-    arrowRigth = document.querySelector('.btn__rigth'),
+    arrowLeft = document.querySelectorAll('.btn__left'),
+    arrowRigth = document.querySelectorAll('.btn__rigth'),
     current = 0;
 
 
@@ -24,7 +24,7 @@ let slideImg = document.querySelectorAll('.slaid__img img'),
             reset();
 
             slide[current - 1].style.display = 'block'
-            
+
             console.log(slide[current]);
             current--;
         }
@@ -32,28 +32,35 @@ let slideImg = document.querySelectorAll('.slaid__img img'),
         function goRight(){
             reset();
             slide[current + 1].style.display = 'block'
-            
+
             current ++;
         }
 
-        arrowRigth.addEventListener('click', () =>{
-            
-            if (current === slide.length - 1){
-                current = -1;
-            }
+         arrowRigth.forEach((btn) =>{
 
-            goRight();
-        })
+             btn.addEventListener('click', () =>{
+    
+                 if (current === slide.length - 1){
+                     current = -1;
+                 }
+    
+                 goRight();
+             })
+         })
 
-        arrowLeft.addEventListener('click', () =>{
-            if (current === 0){
-                current = slide.length;
-                
-            }
+        
 
-            goLeft();
-        })
+        arrowLeft.forEach((btn) =>{
+
+            btn.addEventListener('click', () =>{
+                if (current === 0){
+                    current = slide.length;
+    
+                }
+    
+                goLeft();
+            })
+        })    
 
         startSlide();
 
-       

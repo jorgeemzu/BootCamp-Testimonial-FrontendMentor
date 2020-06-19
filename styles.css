@@ -22,7 +22,7 @@ body{
 
 header{
    padding-top: 3em;
-   height: 100vh;
+   /* height: 100vh; */
 }
 
 img, svg{
@@ -35,13 +35,11 @@ img, svg{
     position: relative;
 }
 
-.slaid{
+/* .slaid{
     margin-bottom: 4.7em;
-    /* height: 100vh; */
+     height: 100vh; 
     transition:  3s ease ;
-}
-
-
+} */
 
 .slaider, .container{
     width: 90%;
@@ -54,14 +52,8 @@ img, svg{
     background-image: url('images/pattern-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
 
-}
-
-.slide1 .slaid__img .img{
-    background-image: url('images/image-tanya.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .slaid__img{
@@ -74,8 +66,6 @@ img, svg{
 
 }
 
-
-
 .btns{
     margin-top: -1.5em;
     position: absolute;
@@ -86,7 +76,7 @@ img, svg{
     align-items: center;
     justify-content: space-between;
     left: calc(50% - 40px);
-    top: 57%;    
+        
 }
 
 .btn__left,
@@ -100,8 +90,6 @@ img, svg{
     cursor: pointer;
     outline: none;
 }
-
-
 
 .slaid__text{
     text-align: center;
@@ -130,6 +118,69 @@ img, svg{
 
 .curve{
     display: block;
+    
+}
+
+@media (min-width: 960px){
+
+    header{
+        padding: 3em;
+    }
+
+    .flex{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    .slaid{
+        margin-bottom: 0;
+    }
+
+    .slaid__top{
+        width: 100%;
+    }
+
+    .slaid__img{
+        padding: 3.3em;
+    }
+
+    .slaid__text{
+        text-align: left;
+        margin-left: 4em;
+    }
+
+    .slaid__text img{
+        margin-left: 10em;
+    }
+
+    .text__testimonial{
+        margin-right: -8em;
+        margin-bottom: 2em;
+    }
+
+    .text__testimonial p{
+        font-size: 2rem;
+        
+    }
+
+    .text__testimonial--info{
+        display: flex;
+        
+    }
+
+    .text__testimonial--info h2{
+        margin-right: 1em;
+    }
+
+    .btns{
+        left: 20%;
+    }
+
+    .curve{
+        margin-top: -8em;
+    }
 }
 
 
