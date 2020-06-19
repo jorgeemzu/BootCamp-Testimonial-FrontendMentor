@@ -21,22 +21,32 @@ body{
 }
 
 header{
-    padding: 3em 0;
+   padding-top: 3em;
+   height: 100vh;
 }
 
 img, svg{
     max-width: 100%;
+    
+}
+
+
+.wrapper{
+    position: relative;
 }
 
 .slaid{
-    margin-bottom: 3em;
-    height: 100vh;
+    margin-bottom: 4.7em;
+    /* height: 100vh; */
+    transition:  3s ease ;
 }
+
+
 
 .slaider, .container{
     width: 90%;
     margin: 0 auto;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
 }
 
@@ -64,6 +74,8 @@ img, svg{
 
 }
 
+
+
 .btns{
     margin-top: -1.5em;
     position: absolute;
@@ -74,22 +86,22 @@ img, svg{
     align-items: center;
     justify-content: space-between;
     left: calc(50% - 40px);
-    top: calc(50% + 20px);
-    cursor: S;
+    top: 57%;    
 }
-
-
 
 .btn__left,
 .btn__rigth{
-    /* background-image: url(images/icon-prev.svg); */
     padding: .8em;
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
     background-color: transparent;
     width: 80%;
+    cursor: pointer;
+    outline: none;
 }
+
+
 
 .slaid__text{
     text-align: center;
@@ -114,6 +126,10 @@ img, svg{
 
 .text__testimonial--info p{
     color: var(--grayBlue);
+}
+
+.curve{
+    display: block;
 }
 
 
